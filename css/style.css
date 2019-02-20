@@ -13,3 +13,19 @@ header,
     background-size: cover;
 }
 
+.top-nav-collapse {
+    background-color: #FF8800;
+}
+@media (max-width: 768px) {
+    .navbar:not(.top-nav-collapse) {
+        background-color: #FF8800;
+    }
+}
+@media (min-width: 800px) and (max-width: 850px) {
+    .navbar:not(.top-nav-collapse) {
+        background-color: #FF8800;
+    }
+}
+html {
+    scroll-behavior: smooth;
+}
