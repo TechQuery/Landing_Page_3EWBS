@@ -1,0 +1,32 @@
+{
+  "name": "landingpage3e",
+  "version": "1.0.0",
+  "description": "Material Design for Bootstrap",
+  "main": "./js/index.js",
+  "dependencies": {
+    "npm": "^6.8.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "babel-plugin-inline-import": "^3.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akagilnc/Landing_Page_3EWBS.git"
+  },
+  "keywords": [
+    "3ewbs",
+    "3E女子商学院"
+  ],
+  "author": "ak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Akagilnc/Landing_Page_3EWBS/issues"
+  },
+  "homepage": "https://github.com/Akagilnc/Landing_Page_3EWBS#readme"
+}
