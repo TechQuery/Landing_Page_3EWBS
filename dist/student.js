@@ -207,7 +207,7 @@ var _module_ = {
             });
             exports.default = void 0;
             var _default =
-                '<template>\n    <div class="card col-lg-4 col-md-12 mb-4">\n        <div class="view overlay z-depth-1-half">\n            <img src="img/students/${view.avatar}" class="img-fluid" alt="student photo">\n            <div class="mask rgba-black-strong"></div>\n        </div>\n\n        <h4 class="card-title my-3 font-weight-bold">${view.name}\n            <a target="_blank" rel="noopener noreferrer" class="nav-link" href="https://mp.weixin.qq.com/mp/profile_ext?action=home&amp;__biz=MzI4MzY0NDQxMg==&amp;scene=126&amp;bizpsid=0#wechat_redirect">\n                <i class="fab fa-weixin"></i>\n            </a>\n        </h4>\n        <p class="grey-text">${view.title}</p>\n        <p class="grey-text">${view.desc}</p>\n    </div>\n</template>';
+                '<template>\n    <div class="card col-lg-4 col-md-12 mb-4">\n        <div class="view overlay z-depth-1-half">\n            <img src="img/students/${view.avatar}" class="img-fluid" alt="student photo">\n            <div class="mask rgba-black-strong"></div>\n        </div>\n\n        <h4 class="card-title my-3 font-weight-bold">${view.name}\n            <a target="_blank" rel="noopener noreferrer" href="https://mp.weixin.qq.com/mp/profile_ext?action=home&amp;__biz=MzI4MzY0NDQxMg==&amp;scene=126&amp;bizpsid=0#wechat_redirect">\n                <i class="fab fa-weixin"></i>\n            </a>\n        </h4>\n        <p class="grey-text">${view.title}</p>\n        <p class="grey-text">${view.desc}</p>\n    </div>\n</template>';
             exports.default = _default;
         }
     },
