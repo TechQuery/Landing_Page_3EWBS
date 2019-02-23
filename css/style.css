@@ -29,3 +29,7 @@ header,
 html {
     scroll-behavior: smooth;
 }
+
+#student .card {
+    min-width: 30%;
+}
