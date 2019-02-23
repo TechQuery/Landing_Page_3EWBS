@@ -2,7 +2,10 @@
   "name": "landingpage3e",
   "version": "1.0.0",
   "description": "Material Design for Bootstrap",
-  "main": "./js/index.js",
+  "main": "source/teacher/index.js",
+  "directories": {
+    "lib": "source/"
+  },
   "dependencies": {
     "npm": "^6.8.0"
   },
@@ -10,10 +13,13 @@
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.3",
     "@babel/preset-env": "^7.3.1",
-    "babel-plugin-inline-import": "^3.0.0"
+    "amd-bundle": "^1.7.4",
+    "babel-plugin-inline-import": "^3.0.0",
+    "web-cell-cli": "^0.8.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "web-cell pack"
   },
   "repository": {
     "type": "git",
@@ -28,5 +34,21 @@
   "bugs": {
     "url": "https://github.com/Akagilnc/Landing_Page_3EWBS/issues"
   },
-  "homepage": "https://github.com/Akagilnc/Landing_Page_3EWBS#readme"
+  "homepage": "https://github.com/Akagilnc/Landing_Page_3EWBS#readme",
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ],
+    "plugins": [
+      [
+        "babel-plugin-inline-import",
+        {
+          "extensions": [
+            ".css",
+            ".json"
+          ]
+        }
+      ]
+    ]
+  }
 }
