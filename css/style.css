@@ -32,4 +32,10 @@ html {
 
 #student .card {
     min-width: 30%;
+
+}
+
+#student h4 {
+    display: flex;
+    justify-content: space-between;
 }
