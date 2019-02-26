@@ -30,6 +30,10 @@ html {
     scroll-behavior: smooth;
 }
 
+video {
+    object-fit: cover
+}
+
 #student .card {
     min-width: 30%;
 
