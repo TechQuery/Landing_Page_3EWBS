@@ -14,6 +14,7 @@ Promise.all(data.map(async data => {
 
     return item;
 })).then(list => {
-    for (let view of list)
+    for (let view of list) {
         box.append(...view.topNodes);
+    }
 });
