@@ -4,11 +4,11 @@ import template from './index.html';
 
 import data from './index.json';
 
-let teacher = new View(parseDOM(template).firstChild.innerHTML), box = document.querySelector('#student');
+const class_schedule = new View(parseDOM(template).firstChild.innerHTML), box = document.querySelector('#class_schedule');
 
 Promise.all(data.map(async data => {
 
-    const item = teacher.clone();
+    const item = class_schedule.clone();
 
     await item.render(data);
 
