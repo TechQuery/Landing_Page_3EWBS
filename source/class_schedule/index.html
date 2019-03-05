@@ -1,0 +1,29 @@
+<template>
+    <div class="table-responsive text-nowrap">
+        <table class="table table-sm">
+            <thead class="grey lighten-2" data-view="titles">
+            <template>
+                <tr>
+                    <th scope="col">${view.time}</th>
+                    <th scope="col">${view.teacher}</th>
+                    <th scope="col">${view.title}</th>
+                    <th scope="col">${view.time}</th>
+                    <th scope="col">${view.address}</th>
+                </tr>
+            </template>
+            </thead>
+
+            <tbody data-view="classes">
+            <template>
+                <tr>
+                    <td>${view.time}</td>
+                    <td>${view.teacher}</td>
+                    <td>${view.title}</td>
+                    <td>${view.time}</td>
+                    <td>${view.address}</td>
+                </tr>
+            </template>
+            </tbody>
+        </table>
+    </div>
+</template>
