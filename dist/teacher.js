@@ -154,22 +154,59 @@ var _module_ = {
             exports.default = void 0;
             var _default = [
                 {
-                    name: '鹿雯立',
-                    avatar: '鹿雯立.png',
-                    title:
-                        '中国幸福教练联盟 发起人<br>美国职业培训认证协会 培训师<br>畅销书作家'
+                    index: 1,
+                    teachers: [
+                        {
+                            avatar: 'course.png'
+                        },
+                        {
+                            avatar: 'course.png'
+                        },
+                        {
+                            name: '鹿雯立',
+                            avatar: '鹿雯立.png',
+                            title:
+                                '中国幸福教练联盟 发起人<br>美国职业培训认证协会 培训师<br>畅销书作家'
+                        }
+                    ]
                 },
                 {
-                    name: '冯岩',
-                    avatar: '冯岩.png',
-                    title:
-                        '成都海川百纳商业管理有限公司 联合创始人<br>江湖火锅 创始人'
+                    teachers: [
+                        {
+                            avatar: 'course.png'
+                        },
+                        {
+                            name: '冯岩',
+                            avatar: '冯岩.png',
+                            title:
+                                '成都海川百纳商业管理有限公司 联合创始人<br>江湖火锅 创始人'
+                        },
+                        {
+                            name: 'Mercury',
+                            avatar: 'Mercury.png',
+                            title:
+                                'M Studio花与礼物 创始人<br>全球最大媒介集团群邑中国 媒体策划总监<br>群邑亚太区30位30岁以下年轻领导者之一'
+                        }
+                    ]
                 },
                 {
-                    name: 'Mercury',
-                    avatar: 'Mercury.png',
-                    title:
-                        'M Studio花与礼物 创始人<br>全球最大媒介集团群邑中国 媒体策划总监<br>群邑亚太区30位30岁以下年轻领导者之一'
+                    teachers: [
+                        {
+                            avatar: 'course.png'
+                        },
+                        {
+                            name: '冯岩',
+                            avatar: '冯岩.png',
+                            title:
+                                '成都海川百纳商业管理有限公司 联合创始人<br>江湖火锅 创始人'
+                        },
+                        {
+                            name: 'Mercury',
+                            avatar: 'Mercury.png',
+                            title:
+                                'M Studio花与礼物 创始人<br>全球最大媒介集团群邑中国 媒体策划总监<br>群邑亚太区30位30岁以下年轻领导者之一'
+                        }
+                    ]
                 }
             ];
             exports.default = _default;
@@ -184,7 +221,7 @@ var _module_ = {
             });
             exports.default = void 0;
             var _default =
-                '<template>\n    <div class="card card-cascade col-md-4 mb-1">\n        <div class="view overlay z-depth-1-half">\n            <img src="img/teachers/${view.avatar}" alt="teacher photo" class="img-fluid">\n            <div class="mask rgba-white-light"></div>\n        </div>\n        <h4 class="card-title my-4 font-weight-bold ">${view.name}</h4>\n        <p class="py-2">${view.title}</p>\n    </div>\n</template>';
+                '<template>\n    <div class="carousel-item ${view.index ? \'active\' : \'\'}">\n        <div class="card-deck" data-view="teachers">\n            <template>\n                <div class="card card-cascade mb-1">\n                    <img src="img/teachers/${view.avatar}" alt="teacher photo" class="img-fluid">\n                    <h4 class="card-title my-4 font-weight-bold " hidden="${!view.name}">${view.name}</h4>\n                    <p class="py-2" hidden="${!view.name}">${view.title}</p>\n                </div>\n            </template>\n        </div>\n    </div>\n</template>\n\n';
             exports.default = _default;
         }
     },
