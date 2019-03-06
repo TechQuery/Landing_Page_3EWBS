@@ -12,8 +12,8 @@
             <tbody data-view="classes">
             <template>
                 <tr>
-                    <td class="align-middle">${view.time}</td>
-                    <td hidden="${!view.teacher}" class="align-middle">
+                    <td>${view.time}</td>
+                    <td hidden="${!view.teacher}">
                         <div data-view="teacher">
                             <template>
                                 <p>${view.name}<br>
@@ -21,9 +21,9 @@
                             </template>
                         </div>
                     </td>
-                    <td colspan="${!view.teacher ? 2 : 1}" class="align-middle">${view.title}</td>
-                    <td class="align-middle">${view.type}</td>
-                    <td class="align-middle">${view.address}</td>
+                    <td colspan="${!view.teacher ? 2 : 1}">${view.title}</td>
+                    <td>${view.type}</td>
+                    <td>${view.address}</td>
                 </tr>
             </template>
             </tbody>
