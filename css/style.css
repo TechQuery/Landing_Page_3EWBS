@@ -43,3 +43,11 @@ video {
     display: flex;
     justify-content: space-between;
 }
+
+#class_schedule .table td {
+    vertical-align: middle;
+}
+
+#class_schedule p {
+    margin-bottom: 0;
+}
