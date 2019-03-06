@@ -264,8 +264,9 @@ var _module_ = {
                         },
                         {
                             time: '4月14日 周日 9:00-12:00',
-                            event: {
-                                name: '吴雅阁摩登艺匠创始人'
+                            teacher: {
+                                name: '吴雅阁',
+                                title: '摩登艺匠创始人'
                             },
                             title: '如何打造客户的 极致体验',
                             type: '线下 培训',
@@ -333,9 +334,6 @@ var _module_ = {
                         },
                         {
                             time: '5月5日 周日 14:00-17:00',
-                            event: {
-                                name: '创意营销活动'
-                            },
                             title: '创意营销活动',
                             type: '线下 实操演练',
                             address: '小组自选商圈'
@@ -362,9 +360,6 @@ var _module_ = {
                         },
                         {
                             time: '5月19日周日 14:00-17:00',
-                            event: {
-                                name: '毕业典礼'
-                            },
                             title: '毕业典礼',
                             type: '毕业典礼',
                             address: '毕业典礼'
@@ -384,7 +379,7 @@ var _module_ = {
             });
             exports.default = void 0;
             var _default =
-                '<template>\n    <div class="table-responsive">\n        <table class="table table-fixed table-striped table-bordered">\n            <thead class="warning-color-dark text-white">\n            <tr data-view="titles">\n                <template>\n                    <th scope="col">${view.title}</th>\n                </template>\n            </tr>\n            </thead>\n\n            <tbody data-view="classes">\n            <template>\n                <tr>\n                    <td>${view.time}</td>\n                    <td data-view="teacher">\n                        <template>\n                            <p>${view.name}</p>\n                            <p>${view.title}</p>\n                        </template>\n                    </td>\n                    <td hidden="${!view.name}" data-view="event">\n                        <template>\n                            <p>${view.name}</p>\n                        </template>\n                    </td>\n                    <td>${view.title}</td>\n                    <td>${view.type}</td>\n                    <td>${view.address}</td>\n                </tr>\n            </template>\n            </tbody>\n        </table>\n    </div>\n</template>';
+                '<template>\n    <div class="table-responsive">\n        <table class="table table-fixed table-striped table-bordered text-center">\n            <thead class="warning-color-dark text-white">\n            <tr data-view="titles">\n                <template>\n                    <th scope="col">${view.title}</th>\n                </template>\n            </tr>\n            </thead>\n\n            <tbody data-view="classes">\n            <template>\n                <tr>\n                    <td>${view.time}</td>\n                    <td hidden="${!view.teacher}">\n                        <p>${view.teacher.name}</p>\n                        <p>${view.teacher.title}</p>\n                    </td>\n                    <td colspan="${!view.teacher ? \'2\' : \'1\'}">${view.title}</td>\n                    <td>${view.type}</td>\n                    <td>${view.address}</td>\n                </tr>\n            </template>\n            </tbody>\n        </table>\n    </div>\n</template>';
             exports.default = _default;
         }
     },
