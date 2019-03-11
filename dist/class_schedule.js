@@ -163,12 +163,6 @@ var _module_ = {
                         },
                         {
                             title: '课题'
-                        },
-                        {
-                            title: '形式'
-                        },
-                        {
-                            title: '地址'
                         }
                     ],
                     classes: [
