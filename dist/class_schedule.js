@@ -202,7 +202,7 @@ var _module_ = {
                                 name: '邱晓虹',
                                 title: ' PMInternational  总裁'
                             },
-                            title: '个人天赋 发现与发挥',
+                            title: '个人天赋 发现与发挥 （上）',
                             type: '线下 沙龙',
                             address: '星河明信国际创客 空间路演厅'
                         },
@@ -212,7 +212,7 @@ var _module_ = {
                                 name: '邱晓虹',
                                 title: ' PMInternational  总裁'
                             },
-                            title: '（选修） 个人天赋 发现与发挥',
+                            title: '（选修） 个人天赋 发现与发挥 （下）',
                             type: '线下 沙龙',
                             address: '星河明信国际创客 空间路演厅'
                         },
@@ -252,7 +252,7 @@ var _module_ = {
                                 name: '陈秋晖',
                                 title: '久谦教育创始人'
                             },
-                            title: '品牌如 输出',
+                            title: '品牌如何 输出',
                             type: '线下 培训',
                             address: '星河明信国际创客 空间路演厅'
                         },
@@ -298,7 +298,7 @@ var _module_ = {
                                 name: '朱绯',
                                 title: '立美皮肤管 主理人'
                             },
-                            title: '如何有效 开发和 管理客户',
+                            title: '如何有效 开发和 管理客户 （上）',
                             type: '线下 培训',
                             address: '星河明信国际创客 空间路演厅'
                         },
@@ -308,7 +308,7 @@ var _module_ = {
                                 name: '朱绯',
                                 title: '立美皮肤管 主理人'
                             },
-                            title: '（选修） 如何有效 开发和 管理客户',
+                            title: '（选修） 如何有效 开发和 管理客户 （下）',
                             type: '线下 培训',
                             address: '星河明信国际创客 空间路演厅'
                         },
@@ -379,7 +379,7 @@ var _module_ = {
                             address: '星河明信国际创客 空间路演厅'
                         },
                         {
-                            time: '12月16日',
+                            time: '12月08日',
                             title: '千人大会',
                             type: '千人大会',
                             address: '千人大会'
