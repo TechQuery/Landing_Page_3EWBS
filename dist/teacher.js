@@ -159,7 +159,7 @@ var _module_ = {
                         {
                             avatar: 'course_intro.jpeg',
                             title:
-                                '适 合 人 群\n· 有明确创业打算的女性\n· 女性初创业者（创业项目不满3年）'
+                                '适 合 人 群<br>· 有明确创业打算的女性<br>· 女性初创业者（创业项目不满3年）'
                         },
                         {
                             avatar: 'course.png'
