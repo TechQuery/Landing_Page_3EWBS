@@ -223,7 +223,7 @@ var _module_ = {
             });
             exports.default = void 0;
             var _default =
-                '<template>\n    <div class="carousel-item ${view.index ? \'active\' : \'\'}">\n        <div class="card-deck" data-view="teachers">\n            <template>\n                <div class="card card-cascade mb-1">\n                    <img src="img/teachers/${view.avatar}" alt="teacher photo" class="img-fluid">\n                    <h4 class="card-title my-4 font-weight-bold " hidden="${!view.name}">${view.name}</h4>\n                    <p class="py-2" hidden="${!view.name}">${view.title}</p>\n                </div>\n            </template>\n        </div>\n    </div>\n</template>\n\n';
+                '<template>\n    <div class="carousel-item ${view.index ? \'active\' : \'\'}">\n        <div class="card-deck" data-view="teachers">\n            <template>\n                <div class="card card-cascade mb-1">\n                    <img src="img/teachers/${view.avatar}" alt="teacher photo" class="img-fluid">\n                    <h4 class="card-title my-4 font-weight-bold " hidden="${!view.name}">${view.name}</h4>\n                    <p class="py-2" hidden="${!view.title}">${view.title}</p>\n                </div>\n            </template>\n        </div>\n    </div>\n</template>\n\n';
             exports.default = _default;
         }
     },
