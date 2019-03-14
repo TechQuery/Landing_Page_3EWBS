@@ -157,7 +157,7 @@ var _module_ = {
                     index: 1,
                     teachers: [
                         {
-                            avatar: 'course.png'
+                            avatar: 'course_intro.jpeg'
                         },
                         {
                             avatar: 'course.png'
@@ -178,7 +178,8 @@ var _module_ = {
                         {
                             name: '冯岩',
                             avatar: '冯岩.png',
-                            title: 'index.json'
+                            title:
+                                '成都海川百纳商业管理有限公司 联合创始人<br>江湖火锅 创始人'
                         },
                         {
                             name: 'Mercury',
