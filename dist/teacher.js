@@ -173,7 +173,7 @@ var _module_ = {
                 {
                     teachers: [
                         {
-                            avatar: 'course.png'
+                            avatar: 'course_intro.jpeg'
                         },
                         {
                             name: '冯岩',
@@ -192,7 +192,7 @@ var _module_ = {
                 {
                     teachers: [
                         {
-                            avatar: 'course.png'
+                            avatar: 'course_intro.jpeg'
                         },
                         {
                             name: '冯岩',
