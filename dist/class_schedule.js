@@ -270,7 +270,7 @@ var _module_ = {
                             time: '4月14日 周日 9:00-12:00',
                             teacher: {
                                 name: '吴雅阁',
-                                title: '摩登艺匠创始人'
+                                title: '俊诚传媒高级合伙人'
                             },
                             title: '如何打造客户的 极致体验',
                             type: '线下 培训',
