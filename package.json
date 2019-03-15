@@ -20,8 +20,12 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "web-cell pack",
-    "pre-commit": "npm run build"
+    "build": "web-cell pack"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run build"
+    }
   },
   "repository": {
     "type": "git",
