@@ -143,215 +143,201 @@ function _asyncToGenerator(fn) {
     };
 }
 
-var _module_ = {
-    './index.json': {
-        base: '.',
-        dependency: [],
-        factory: function factory(require, exports, module) {
-            Object.defineProperty(exports, '__esModule', {
-                value: true
-            });
-            exports.default = void 0;
-            var _default = [
-                {
-                    name: '陈秋晖',
-                    avatar: '陈秋晖.jpg',
-                    title: '成都久谦教育 创始人',
-                    desc:
-                        '身为4岁孩子妈妈的她，深知孩子真真需要的是什么，于是创办了久谦教育。 主营业务是为1.5-6岁小朋友提供朝九晚五全日托育服务，旨在帮助更多的年轻人既能平衡工作与家庭， 也能让小朋友得到专业的教育引导及护。在第2期训练结束后久谦教育的发展更是稳中求胜， 由1家社区店发展到5家托育中心。'
-                },
-                {
-                    name: '邱晓虹',
-                    avatar: '邱晓虹.jpg',
-                    title: 'PM International 总裁',
-                    desc:
-                        '她是一个学霸，2010年加拿大滑铁卢大学精算本科毕业，2011年从美国密西根大学金融工程研究生毕业。 毕业过后她在华尔街做起了精算师，再后来她接触到德国营养品—PM International，并成为了月销百万的总裁。 在第4期训练营结束后，3E女子商学院也和邱晓虹有了进一步的合作。荣升至导师团队， 将从第5期开始进行个人天赋发挥方面的课题分享。'
-                },
-                {
-                    name: '周颖',
-                    avatar: '周颖.jpg',
-                    title: '成都云中谷农业科技有限公司 创始人',
-                    desc:
-                        '从时尚编辑到农产品品牌创始人，从光鲜亮丽的职场到面朝黄土背朝天， 周颖说2年半农半城的理想生活 ，野心成就不了你，但是爱好可以。 在2年半的时间里周颖打造了一个水果中的网红品牌— Hi Sweety甜蜜研究所。 在训练营学习过后，周颖将品牌进行了升级，从产品到包装都重新进行了梳理， 效果也是十分的显著，月销超过百万。'
-                },
-                {
-                    name: '赵明月',
-                    avatar: '赵明月.jpg',
-                    title: '华嘉律师事务所 联合创始人\n\n',
-                    desc:
-                        '她不仅有着过硬的专业知识，更有着强烈的社会责任和担当，在为女性赢取更多的权益上做了很多努力。 在训练结束后，赵明月和3E女子商学院联合打造了一系列关于女性的法律课堂。'
-                },
-                {
-                    name: '熊琪',
-                    avatar: '熊琪.jpg',
-                    title: 'Jbear女装品牌 创始人',
-                    desc:
-                        '因为热爱时尚和服装搭配，熊琪2014年开始在社交平台分享穿搭，并创立JBear女装品牌。粉丝累计超过20万的J.Bear一直追求简约、小众、轻熟、实用的穿衣风格，带来兼具时髦与实用的女装，简单柔和，表达独立与自信的态度，励志打造互联网特色女装品牌。在训练营学习过后，J.bear女装将人、财、物等方面的知识进行有效运用，在短短一年时间内销售额增长近50%。同时也认识了很多一起创业的小伙伴，让我的创业路不再孤单。'
-                },
-                {
-                    name: '朱绯',
-                    avatar: '朱绯.jpg',
-                    title: '立美皮肤管理结构 主理人',
-                    desc:
-                        '在奢侈品品牌工作多年的她辞职开始创业，创办了立美皮肤管理机构。 在开始创立不久朱绯进入3E女子商学院学习，在这个过程中她在品牌输出，市场合作方面都有效的增长。 因为在奢侈品品牌工作过很长时间并且长期拿到销冠，所以朱绯在客户管理方面有着十分丰富的经验， 在第4期训练营结束以后也与3E女子商学院有了进一步合作，荣升至导师。'
+var _module_ = {};
+_module_['./index.json'] = {
+    base: '.',
+    dependency: []
+};
+
+_module_['./index.json'].factory = function(require, exports, module) {
+    Object.defineProperty(exports, '__esModule', {
+        value: true
+    });
+    exports['default'] = void 0;
+    var _default = [
+        {
+            name: '陈秋晖',
+            avatar: '陈秋晖.jpg',
+            title: '成都久谦教育 创始人',
+            desc:
+                '身为4岁孩子妈妈的她，深知孩子真真需要的是什么，于是创办了久谦教育。 主营业务是为1.5-6岁小朋友提供朝九晚五全日托育服务，旨在帮助更多的年轻人既能平衡工作与家庭， 也能让小朋友得到专业的教育引导及护。在第2期训练结束后久谦教育的发展更是稳中求胜， 由1家社区店发展到5家托育中心。'
+        },
+        {
+            name: '邱晓虹',
+            avatar: '邱晓虹.jpg',
+            title: 'PM International 总裁',
+            desc:
+                '她是一个学霸，2010年加拿大滑铁卢大学精算本科毕业，2011年从美国密西根大学金融工程研究生毕业。 毕业过后她在华尔街做起了精算师，再后来她接触到德国营养品—PM International，并成为了月销百万的总裁。 在第4期训练营结束后，3E女子商学院也和邱晓虹有了进一步的合作。荣升至导师团队， 将从第5期开始进行个人天赋发挥方面的课题分享。'
+        },
+        {
+            name: '周颖',
+            avatar: '周颖.jpg',
+            title: '成都云中谷农业科技有限公司 创始人',
+            desc:
+                '从时尚编辑到农产品品牌创始人，从光鲜亮丽的职场到面朝黄土背朝天， 周颖说2年半农半城的理想生活 ，野心成就不了你，但是爱好可以。 在2年半的时间里周颖打造了一个水果中的网红品牌— Hi Sweety甜蜜研究所。 在训练营学习过后，周颖将品牌进行了升级，从产品到包装都重新进行了梳理， 效果也是十分的显著，月销超过百万。'
+        },
+        {
+            name: '赵明月',
+            avatar: '赵明月.jpg',
+            title: '华嘉律师事务所 联合创始人\n\n',
+            desc:
+                '她不仅有着过硬的专业知识，更有着强烈的社会责任和担当，在为女性赢取更多的权益上做了很多努力。 在训练结束后，赵明月和3E女子商学院联合打造了一系列关于女性的法律课堂。'
+        },
+        {
+            name: '熊琪',
+            avatar: '熊琪.jpg',
+            title: 'Jbear女装品牌 创始人',
+            desc:
+                '因为热爱时尚和服装搭配，熊琪2014年开始在社交平台分享穿搭，并创立JBear女装品牌。粉丝累计超过20万的J.Bear一直追求简约、小众、轻熟、实用的穿衣风格，带来兼具时髦与实用的女装，简单柔和，表达独立与自信的态度，励志打造互联网特色女装品牌。在训练营学习过后，J.bear女装将人、财、物等方面的知识进行有效运用，在短短一年时间内销售额增长近50%。同时也认识了很多一起创业的小伙伴，让我的创业路不再孤单。'
+        },
+        {
+            name: '朱绯',
+            avatar: '朱绯.jpg',
+            title: '立美皮肤管理结构 主理人',
+            desc:
+                '在奢侈品品牌工作多年的她辞职开始创业，创办了立美皮肤管理机构。 在开始创立不久朱绯进入3E女子商学院学习，在这个过程中她在品牌输出，市场合作方面都有效的增长。 因为在奢侈品品牌工作过很长时间并且长期拿到销冠，所以朱绯在客户管理方面有着十分丰富的经验， 在第4期训练营结束以后也与3E女子商学院有了进一步合作，荣升至导师。'
+        }
+    ];
+    exports['default'] = _default;
+};
+
+_module_['./index.html'] = {
+    base: '.',
+    dependency: []
+};
+
+_module_['./index.html'].factory = function(require, exports, module) {
+    Object.defineProperty(exports, '__esModule', {
+        value: true
+    });
+    exports['default'] = void 0;
+    var _default =
+        '<template>\n    <div class="card col-lg-4 col-md-12 mb-4">\n        <div class="view overlay z-depth-1-half">\n            <img src="img/students/${view.avatar}" class="img-fluid" alt="student photo">\n            <div class="mask rgba-black-strong"></div>\n        </div>\n\n        <h4 class="card-title my-3 font-weight-bold">${view.name}\n            <a target="_blank" rel="noopener noreferrer" href="https://mp.weixin.qq.com/mp/profile_ext?action=home&amp;__biz=MzI4MzY0NDQxMg==&amp;scene=126&amp;bizpsid=0#wechat_redirect">\n                <i class="fab fa-weixin"></i>\n            </a>\n        </h4>\n        <p class="grey-text">${view.title}</p>\n        <p class="grey-text">${view.desc}</p>\n    </div>\n</template>';
+    exports['default'] = _default;
+};
+
+_module_['./index'] = {
+    base: '.',
+    dependency: []
+};
+
+_module_['./index'].factory = function(require, exports, module) {
+    var _domRenderer = _interopRequireWildcard(require('dom-renderer'));
+
+    var _index = _interopRequireDefault(require('./index.html'));
+
+    var _index2 = _interopRequireDefault(require('./index.json'));
+
+    function _interopRequireDefault(obj) {
+        return obj && obj.__esModule
+            ? obj
+            : {
+                  default: obj
+              };
+    }
+
+    function _interopRequireWildcard(obj) {
+        if (obj && obj.__esModule) {
+            return obj;
+        } else {
+            var newObj = {};
+
+            if (obj != null) {
+                for (var key in obj) {
+                    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+                        var desc =
+                            Object.defineProperty &&
+                            Object.getOwnPropertyDescriptor
+                                ? Object.getOwnPropertyDescriptor(obj, key)
+                                : {};
+
+                        if (desc.get || desc.set) {
+                            Object.defineProperty(newObj, key, desc);
+                        } else {
+                            newObj[key] = obj[key];
+                        }
+                    }
                 }
-            ];
-            exports.default = _default;
-        }
-    },
-    './index.html': {
-        base: '.',
-        dependency: [],
-        factory: function factory(require, exports, module) {
-            Object.defineProperty(exports, '__esModule', {
-                value: true
-            });
-            exports.default = void 0;
-            var _default =
-                '<template>\n    <div class="card col-lg-4 col-md-12 mb-4">\n        <div class="view overlay z-depth-1-half">\n            <img src="img/students/${view.avatar}" class="img-fluid" alt="student photo">\n            <div class="mask rgba-black-strong"></div>\n        </div>\n\n        <h4 class="card-title my-3 font-weight-bold">${view.name}\n            <a target="_blank" rel="noopener noreferrer" href="https://mp.weixin.qq.com/mp/profile_ext?action=home&amp;__biz=MzI4MzY0NDQxMg==&amp;scene=126&amp;bizpsid=0#wechat_redirect">\n                <i class="fab fa-weixin"></i>\n            </a>\n        </h4>\n        <p class="grey-text">${view.title}</p>\n        <p class="grey-text">${view.desc}</p>\n    </div>\n</template>';
-            exports.default = _default;
-        }
-    },
-    './index': {
-        base: '.',
-        dependency: [],
-        factory: function factory(require, exports, module) {
-            var _domRenderer = _interopRequireWildcard(require('dom-renderer'));
-
-            var _index = _interopRequireDefault(require('./index.html'));
-
-            var _index2 = _interopRequireDefault(require('./index.json'));
-
-            function _interopRequireDefault(obj) {
-                return obj && obj.__esModule
-                    ? obj
-                    : {
-                          default: obj
-                      };
             }
 
-            function _interopRequireWildcard(obj) {
-                if (obj && obj.__esModule) {
-                    return obj;
-                } else {
-                    var newObj = {};
+            newObj['default'] = obj;
+            return newObj;
+        }
+    }
 
-                    if (obj != null) {
-                        for (var key in obj) {
-                            if (
-                                Object.prototype.hasOwnProperty.call(obj, key)
-                            ) {
-                                var desc =
-                                    Object.defineProperty &&
-                                    Object.getOwnPropertyDescriptor
-                                        ? Object.getOwnPropertyDescriptor(
-                                              obj,
-                                              key
-                                          )
-                                        : {};
+    var teacher = new _domRenderer['default'](
+            (0, _domRenderer.parseDOM)(_index['default']).firstChild.innerHTML
+        ),
+        box = document.querySelector('#student');
+    Promise.all(
+        _index2['default'].map(
+            /*#__PURE__*/
+            (function() {
+                var _ref = _asyncToGenerator(
+                    /*#__PURE__*/
+                    regeneratorRuntime.mark(function _callee(data) {
+                        var item;
+                        return regeneratorRuntime.wrap(function _callee$(
+                            _context
+                        ) {
+                            while (1) {
+                                switch ((_context.prev = _context.next)) {
+                                    case 0:
+                                        item = teacher.clone();
+                                        _context.next = 3;
+                                        return item.render(data);
 
-                                if (desc.get || desc.set) {
-                                    Object.defineProperty(newObj, key, desc);
-                                } else {
-                                    newObj[key] = obj[key];
+                                    case 3:
+                                        return _context.abrupt('return', item);
+
+                                    case 4:
+                                    case 'end':
+                                        return _context.stop();
                                 }
                             }
-                        }
-                    }
+                        },
+                        _callee);
+                    })
+                );
 
-                    newObj.default = obj;
-                    return newObj;
+                return function(_x) {
+                    return _ref.apply(this, arguments);
+                };
+            })()
+        )
+    ).then(function(list) {
+        var _iteratorNormalCompletion = true;
+        var _didIteratorError = false;
+        var _iteratorError = undefined;
+
+        try {
+            for (
+                var _iterator = list[Symbol.iterator](), _step;
+                !(_iteratorNormalCompletion = (_step = _iterator.next()).done);
+                _iteratorNormalCompletion = true
+            ) {
+                var view = _step.value;
+                box.append.apply(box, _toConsumableArray(view.topNodes));
+            }
+        } catch (err) {
+            _didIteratorError = true;
+            _iteratorError = err;
+        } finally {
+            try {
+                if (!_iteratorNormalCompletion && _iterator['return'] != null) {
+                    _iterator['return']();
+                }
+            } finally {
+                if (_didIteratorError) {
+                    throw _iteratorError;
                 }
             }
-
-            var teacher = new _domRenderer.default(
-                    (0, _domRenderer.parseDOM)(
-                        _index.default
-                    ).firstChild.innerHTML
-                ),
-                box = document.querySelector('#student');
-            Promise.all(
-                _index2.default.map(
-                    /*#__PURE__*/
-                    (function() {
-                        var _ref = _asyncToGenerator(
-                            /*#__PURE__*/
-                            regeneratorRuntime.mark(function _callee(data) {
-                                var item;
-                                return regeneratorRuntime.wrap(
-                                    function _callee$(_context) {
-                                        while (1) {
-                                            switch (
-                                                (_context.prev = _context.next)
-                                            ) {
-                                                case 0:
-                                                    item = teacher.clone();
-                                                    _context.next = 3;
-                                                    return item.render(data);
-
-                                                case 3:
-                                                    return _context.abrupt(
-                                                        'return',
-                                                        item
-                                                    );
-
-                                                case 4:
-                                                case 'end':
-                                                    return _context.stop();
-                                            }
-                                        }
-                                    },
-                                    _callee
-                                );
-                            })
-                        );
-
-                        return function(_x) {
-                            return _ref.apply(this, arguments);
-                        };
-                    })()
-                )
-            ).then(function(list) {
-                var _iteratorNormalCompletion = true;
-                var _didIteratorError = false;
-                var _iteratorError = undefined;
-
-                try {
-                    for (
-                        var _iterator = list[Symbol.iterator](), _step;
-                        !(_iteratorNormalCompletion = (_step = _iterator.next())
-                            .done);
-                        _iteratorNormalCompletion = true
-                    ) {
-                        var view = _step.value;
-                        box.append.apply(
-                            box,
-                            _toConsumableArray(view.topNodes)
-                        );
-                    }
-                } catch (err) {
-                    _didIteratorError = true;
-                    _iteratorError = err;
-                } finally {
-                    try {
-                        if (
-                            !_iteratorNormalCompletion &&
-                            _iterator.return != null
-                        ) {
-                            _iterator.return();
-                        }
-                    } finally {
-                        if (_didIteratorError) {
-                            throw _iteratorError;
-                        }
-                    }
-                }
-            });
         }
-    },
-    'dom-renderer': {
-        exports: dom_renderer
-    }
+    });
+};
+
+_module_['dom-renderer'] = {
+    exports: dom_renderer
 };
 
     return _include_('./index');
