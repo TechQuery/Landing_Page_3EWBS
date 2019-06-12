@@ -199,7 +199,7 @@ _module_['./index.json'].factory = function(require, exports, module) {
                     address: '菁蓉汇3A座9楼路演厅'
                 },
                 {
-                    time: '6月22日 周日 9:00-12:00',
+                    time: '6月22日 周六 9:00-12:00',
                     teacher: {
                         name: '邱晓虹',
                         title: ' PMInternational  总裁'
@@ -209,7 +209,7 @@ _module_['./index.json'].factory = function(require, exports, module) {
                     address: '菁蓉汇3A座9楼路演厅'
                 },
                 {
-                    time: '6月22日 周日 14:00-17:00',
+                    time: '6月22日 周六 14:00-17:00',
                     teacher: {
                         name: '邱晓虹',
                         title: ' PMInternational  总裁'
