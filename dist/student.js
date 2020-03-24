@@ -70,29 +70,92 @@ function outPackage(name) {
 
 function _toConsumableArray(arr) {
     return (
-        _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread()
+        _arrayWithoutHoles(arr) ||
+        _iterableToArray(arr) ||
+        _unsupportedIterableToArray(arr) ||
+        _nonIterableSpread()
     );
 }
 
 function _nonIterableSpread() {
-    throw new TypeError('Invalid attempt to spread non-iterable instance');
+    throw new TypeError(
+        'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+    );
 }
 
 function _iterableToArray(iter) {
-    if (
-        Symbol.iterator in Object(iter) ||
-        Object.prototype.toString.call(iter) === '[object Arguments]'
-    )
+    if (typeof Symbol !== 'undefined' && Symbol.iterator in Object(iter))
         return Array.from(iter);
 }
 
 function _arrayWithoutHoles(arr) {
-    if (Array.isArray(arr)) {
-        for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {
-            arr2[i] = arr[i];
+    if (Array.isArray(arr)) return _arrayLikeToArray(arr);
+}
+
+function _createForOfIteratorHelper(o) {
+    if (typeof Symbol === 'undefined' || o[Symbol.iterator] == null) {
+        if (Array.isArray(o) || (o = _unsupportedIterableToArray(o))) {
+            var i = 0;
+            var F = function F() {};
+            return {
+                s: F,
+                n: function n() {
+                    if (i >= o.length) return { done: true };
+                    return { done: false, value: o[i++] };
+                },
+                e: function e(_e) {
+                    throw _e;
+                },
+                f: F
+            };
         }
-        return arr2;
+        throw new TypeError(
+            'Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+        );
     }
+    var it,
+        normalCompletion = true,
+        didErr = false,
+        err;
+    return {
+        s: function s() {
+            it = o[Symbol.iterator]();
+        },
+        n: function n() {
+            var step = it.next();
+            normalCompletion = step.done;
+            return step;
+        },
+        e: function e(_e2) {
+            didErr = true;
+            err = _e2;
+        },
+        f: function f() {
+            try {
+                if (!normalCompletion && it['return'] != null) it['return']();
+            } finally {
+                if (didErr) throw err;
+            }
+        }
+    };
+}
+
+function _unsupportedIterableToArray(o, minLen) {
+    if (!o) return;
+    if (typeof o === 'string') return _arrayLikeToArray(o, minLen);
+    var n = Object.prototype.toString.call(o).slice(8, -1);
+    if (n === 'Object' && o.constructor) n = o.constructor.name;
+    if (n === 'Map' || n === 'Set') return Array.from(n);
+    if (n === 'Arguments' || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n))
+        return _arrayLikeToArray(o, minLen);
+}
+
+function _arrayLikeToArray(arr, len) {
+    if (len == null || len > arr.length) len = arr.length;
+    for (var i = 0, arr2 = new Array(len); i < len; i++) {
+        arr2[i] = arr[i];
+    }
+    return arr2;
 }
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
@@ -141,6 +204,25 @@ function _asyncToGenerator(fn) {
             _next(undefined);
         });
     };
+}
+
+function _typeof(obj) {
+    '@babel/helpers - typeof';
+    if (typeof Symbol === 'function' && typeof Symbol.iterator === 'symbol') {
+        _typeof = function _typeof(obj) {
+            return typeof obj;
+        };
+    } else {
+        _typeof = function _typeof(obj) {
+            return obj &&
+                typeof Symbol === 'function' &&
+                obj.constructor === Symbol &&
+                obj !== Symbol.prototype
+                ? 'symbol'
+                : typeof obj;
+        };
+    }
+    return _typeof(obj);
 }
 
 var _module_ = {};
@@ -236,33 +318,62 @@ _module_['./index'].factory = function(require, exports, module) {
               };
     }
 
+    function _getRequireWildcardCache() {
+        if (typeof WeakMap !== 'function') return null;
+        var cache = new WeakMap();
+
+        _getRequireWildcardCache = function _getRequireWildcardCache() {
+            return cache;
+        };
+
+        return cache;
+    }
+
     function _interopRequireWildcard(obj) {
         if (obj && obj.__esModule) {
             return obj;
-        } else {
-            var newObj = {};
+        }
 
-            if (obj != null) {
-                for (var key in obj) {
-                    if (Object.prototype.hasOwnProperty.call(obj, key)) {
-                        var desc =
-                            Object.defineProperty &&
-                            Object.getOwnPropertyDescriptor
-                                ? Object.getOwnPropertyDescriptor(obj, key)
-                                : {};
+        if (
+            obj === null ||
+            (_typeof(obj) !== 'object' && typeof obj !== 'function')
+        ) {
+            return {
+                default: obj
+            };
+        }
 
-                        if (desc.get || desc.set) {
-                            Object.defineProperty(newObj, key, desc);
-                        } else {
-                            newObj[key] = obj[key];
-                        }
-                    }
+        var cache = _getRequireWildcardCache();
+
+        if (cache && cache.has(obj)) {
+            return cache.get(obj);
+        }
+
+        var newObj = {};
+        var hasPropertyDescriptor =
+            Object.defineProperty && Object.getOwnPropertyDescriptor;
+
+        for (var key in obj) {
+            if (Object.prototype.hasOwnProperty.call(obj, key)) {
+                var desc = hasPropertyDescriptor
+                    ? Object.getOwnPropertyDescriptor(obj, key)
+                    : null;
+
+                if (desc && (desc.get || desc.set)) {
+                    Object.defineProperty(newObj, key, desc);
+                } else {
+                    newObj[key] = obj[key];
                 }
             }
-
-            newObj['default'] = obj;
-            return newObj;
         }
+
+        newObj['default'] = obj;
+
+        if (cache) {
+            cache.set(obj, newObj);
+        }
+
+        return newObj;
     }
 
     var teacher = new _domRenderer['default'](
@@ -271,11 +382,11 @@ _module_['./index'].factory = function(require, exports, module) {
         box = document.querySelector('#student');
     Promise.all(
         _index2['default'].map(
-            /*#__PURE__*/
-            (function() {
+            /*#__PURE__*/ (function() {
                 var _ref = _asyncToGenerator(
-                    /*#__PURE__*/
-                    regeneratorRuntime.mark(function _callee(data) {
+                    /*#__PURE__*/ regeneratorRuntime.mark(function _callee(
+                        data
+                    ) {
                         var item;
                         return regeneratorRuntime.wrap(function _callee$(
                             _context
@@ -306,32 +417,18 @@ _module_['./index'].factory = function(require, exports, module) {
             })()
         )
     ).then(function(list) {
-        var _iteratorNormalCompletion = true;
-        var _didIteratorError = false;
-        var _iteratorError = undefined;
+        var _iterator = _createForOfIteratorHelper(list),
+            _step;
 
         try {
-            for (
-                var _iterator = list[Symbol.iterator](), _step;
-                !(_iteratorNormalCompletion = (_step = _iterator.next()).done);
-                _iteratorNormalCompletion = true
-            ) {
+            for (_iterator.s(); !(_step = _iterator.n()).done; ) {
                 var view = _step.value;
                 box.append.apply(box, _toConsumableArray(view.topNodes));
             }
         } catch (err) {
-            _didIteratorError = true;
-            _iteratorError = err;
+            _iterator.e(err);
         } finally {
-            try {
-                if (!_iteratorNormalCompletion && _iterator['return'] != null) {
-                    _iterator['return']();
-                }
-            } finally {
-                if (_didIteratorError) {
-                    throw _iteratorError;
-                }
-            }
+            _iterator.f();
         }
     });
 };

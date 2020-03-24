@@ -140,8 +140,7 @@ _module_['./index'].factory = function(require, exports, module) {
     map.add(marker); //添加到地图
 
     _asyncToGenerator(
-        /*#__PURE__*/
-        regeneratorRuntime.mark(function _callee() {
+        /*#__PURE__*/ regeneratorRuntime.mark(function _callee() {
             var _i, _arr, name, view_list, list;
 
             return regeneratorRuntime.wrap(function _callee$(_context) {
