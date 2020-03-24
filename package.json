@@ -1,8 +1,8 @@
 {
   "name": "landingpage3e",
   "version": "1.0.0",
-  "description": "Material Design for Bootstrap",
-  "main": "source/teacher/index.js",
+  "description": "",
+  "main": "source/index.js",
   "directories": {
     "lib": "source/",
     "test": "."
