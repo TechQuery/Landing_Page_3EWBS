@@ -8,16 +8,16 @@
     "test": "."
   },
   "dependencies": {
-    "npm": "^6.10.1"
+    "npm": "^6.14.3"
   },
   "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
     "amd-bundle": "^1.7.8",
     "babel-plugin-inline-import": "^3.0.0",
     "husky": "^2.7.0",
-    "web-cell-cli": "^1.0.0-beta"
+    "web-cell-cli": "^1.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
