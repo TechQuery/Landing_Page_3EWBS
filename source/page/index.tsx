@@ -1,15 +1,86 @@
 import { MainNavigator } from "../component/MainNavigator";
+import { StudentCard } from "../component/StudentCard";
+import { TeacherCard } from "../component/TeacherCard";
+import classes from "../data/classes.json";
+import students from "../data/students.json";
+import teachers from "../data/teachers.json";
 
 export const IndexPage = () => (
   <>
-    <MainNavigator />
+    <header>
+      <MainNavigator />
+
+      <div id="intro" className="view">
+        <div className="mask rgba-black-strong">
+          <div className="container-fluid d-flex align-items-center justify-content-center h-100">
+            <div className="row d-flex justify-content-center text-center">
+              <div className="col-md-10">
+                <h2 className="display-4 font-weight-bold white-text pt-5 mb-2">
+                  <span
+                    className="font-weight-normal"
+                    style={{ fontSize: "xx-large" }}
+                  >
+                    初创女性
+                  </span>
+                  <br />
+                  训练营
+                </h2>
+
+                <hr className="hr-light" />
+
+                <h4 className="white-text my-4 text-left">
+                  通过线下为期2个月的短期训练营，与后期陪伴式的创业圈层组织、
+                  个人咨询服务的方式，提高女性创业者的综合能力。
+                </h4>
+                <a href="#contact">
+                  <button type="button" className="btn btn-outline-white">
+                    了解更多<i className="fas fa-award ml-2"></i>
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
 
     <main className="mt-5">
       <div className="container">
-        <section id="courses" className="text-center"></section>
+        <section id="courses" className="text-center">
+          <div class="table-responsive">
+            <table class="table table-fixed table-striped table-bordered text-center">
+              <thead class="warning-color-dark text-white">
+                <tr>
+                  <th scope="col">时间</th>
+                  <th scope="col">导师</th>
+                  <th scope="col">课题</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {classes.map(({ title, type, teacher, time, address }) => (
+                  <tr key={title}>
+                    <td>{time}</td>
+                    <td>
+                      {teacher && (
+                        <ul className="list-unstyled">
+                          <li>{teacher.name}</li>
+                          <li>{teacher.title}</li>
+                        </ul>
+                      )}
+                    </td>
+                    <td colspan="${!view.teacher ? 2 : 1}">{title}</td>
+                    <td>{type}</td>
+                    <td>{address}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
 
         <section id="teachers" className="text-center">
-          <h2 className="mb-5 font-weight-bold ">金牌导师阵容</h2>
+          <h2 className="mb-5 font-weight-bold">金牌导师阵容</h2>
 
           <div className="row d-flex justify-content-center mb-4">
             <div className="col-md-8">
@@ -24,30 +95,15 @@ export const IndexPage = () => (
           <div className="row">
             <div className="carousel slide col-md-12" data-ride="carousel">
               <div className="carousel-inner" id="teacher">
-                <template>
-                  <div className="carousel-item ${view.index ? 'active' : ''}">
-                    <div className="card-deck" data-view="teachers">
-                      <template>
-                        <div className="card card-cascade mb-1">
-                          <img
-                            src="img/teachers/${view.avatar}"
-                            alt="teacher photo"
-                            className="img-fluid"
-                          />
-                          {/* <h4
-                            className="card-title my-4 font-weight-bold "
-                            hidden="${!view.name}"
-                          >
-                            ${view.name}
-                          </h4>
-                          <p className="py-2" hidden="${!view.title}">
-                            ${view.title}
-                          </p> */}
-                        </div>
-                      </template>
-                    </div>
+                {teachers.map(({ teachers }, index) => (
+                  <div className={`carousel-item ${index ? "active" : ""}`}>
+                    {teachers.map((teacher) => (
+                      <div className="card-deck">
+                        <TeacherCard {...teacher} />
+                      </div>
+                    ))}
                   </div>
-                </template>
+                ))}
               </div>
             </div>
           </div>
@@ -77,32 +133,10 @@ export const IndexPage = () => (
         <section id="students">
           <h2 className="mb-5 font-weight-bold text-center">明星学员</h2>
 
-          <div id="student" className="card-deck">
-            <template>
-              <div className="card card-cascade col-lg-4 col-md-12 mb-4">
-                <div className="view overlay z-depth-1-half">
-                  <img
-                    src="img/students/${view.avatar}"
-                    className="img-fluid"
-                    alt="student photo"
-                  />
-                  <div className="mask rgba-black-strong"></div>
-                </div>
-
-                <h4 className="card-title my-3 font-weight-bold">
-                  {/* ${view.name} */}
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzI4MzY0NDQxMg==&scene=126&bizpsid=0#wechat_redirect"
-                  >
-                    <i className="fab fa-weixin"></i>
-                  </a>
-                </h4>
-                {/* <p className="grey-text">${view.title}</p>
-                <p className="grey-text">${view.desc}</p> */}
-              </div>
-            </template>
+          <div className="card-deck">
+            {students.map((student) => (
+              <StudentCard {...student} />
+            ))}
           </div>
         </section>
 
@@ -205,10 +239,10 @@ export const IndexPage = () => (
             </div>
 
             <div className="col-lg-7 col-md-12">
-              <div
-                id="container"
-                className="z-depth-1-half map-container mb-5"
+              <iframe
+                className="z-depth-1-half w-100 mb-5"
                 style={{ height: "400px" }}
+                src="https://uri.amap.com/marker?src=3e-wbc&callnative=1&position=104.063519,30.539362&name=3E女子商学院"
               />
             </div>
           </div>
@@ -216,8 +250,8 @@ export const IndexPage = () => (
           <div className="row text-center">
             <div className="col-lg-4 col-md-12 mb-3">
               <p>
-                <i className="fas fa-map fa-1x mr-2 grey-text"></i>成都, 四川
-                中国
+                <i className="fas fa-map fa-1x mr-2 grey-text" />
+                成都, 四川 中国
               </p>
             </div>
 
