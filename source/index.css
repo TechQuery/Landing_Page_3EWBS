@@ -6,7 +6,7 @@ header,
 }
 
 #intro {
-    background:url("../img/3E.jpg") no-repeat center center fixed;
+    background:url("./img/3E.jpg") no-repeat center center fixed;
     background-size: cover;
 }
 

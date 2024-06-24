@@ -16,8 +16,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf .parcel-cache/ dist/",
-    "build": "npm run clean  &&  parcel build index.html --public-url .",
-    "dev": "npm run clean  &&  parcel index.html"
+    "build": "npm run clean  &&  parcel build source/index.html --public-url .",
+    "dev": "npm run clean  &&  parcel source/index.html"
   },
   "repository": {
     "type": "git",
