@@ -1,29 +1,29 @@
-import students from "../data/students.json";
+import { Card, CardBody, CardTitle, FAIcon, Image } from "boot-cell";
+
+import students from "../data/students";
 
 export type Student = (typeof students)[0];
 
 export const StudentCard = ({ name, avatar, title, desc }: Student) => (
-  <div className="card card-cascade col-lg-4 col-md-12 mb-4">
+  <Card className="card-cascade" style={{ minWidth: "30%" }}>
     <div className="view overlay z-depth-1-half">
-      <img
-        className="img-fluid"
-        src={`img/students/${avatar}`}
-        alt="student photo"
-      />
+      <Image fluid src={avatar} alt={name} />
+
       <div className="mask rgba-black-strong" />
     </div>
-
-    <h4 className="card-title my-3 font-weight-bold">
-      {name}
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzI4MzY0NDQxMg==&scene=126&bizpsid=0#wechat_redirect"
-      >
-        <i className="fab fa-weixin"></i>
-      </a>
-    </h4>
-    <p className="grey-text">{title}</p>
-    <p className="grey-text">{desc}</p>
-  </div>
+    <CardBody>
+      <CardTitle className="my-3 font-weight-bold d-flex justify-content-between">
+        {name}
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzI4MzY0NDQxMg==&scene=126&bizpsid=0#wechat_redirect"
+        >
+          <FAIcon group="brands" name="weixin" />
+        </a>
+      </CardTitle>
+      <p className="grey-text">{title}</p>
+      <p className="grey-text">{desc}</p>
+    </CardBody>
+  </Card>
 );

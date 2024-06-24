@@ -1,80 +1,57 @@
+import {
+  Collapse,
+  Container,
+  FAIcon,
+  Nav,
+  NavLink,
+  Navbar,
+  NavbarBrand,
+  NavbarToggle,
+} from "boot-cell";
+
+const menu = [
+  { title: "课程简介", href: "#intro" },
+  { title: "导师", href: "#teachers" },
+  { title: "精彩活动", href: "#events" },
+  { title: "明星学员", href: "#students" },
+  { title: "课程介绍", href: "#gallery" },
+  { title: "关于我们 & 报名咨询", href: "#contact" },
+];
+
 export const MainNavigator = () => (
-  <nav className="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
-    <div className="container">
-      <a className="navbar-brand" href=".">
-        3E女子商学院
-      </a>
+  <Navbar expand="lg" fixed="top" className="scrolling-navbar">
+    <Container>
+      <NavbarBrand href=".">3E女子商学院</NavbarBrand>
 
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#Nav"
-        aria-controls="Nav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
+      <NavbarToggle />
 
-      <div className="collapse navbar-collapse" id="Nav">
-        <ul className="navbar-nav mr-auto">
-          <li className="nav-item">
-            <a className="nav-link" href="#intro">
-              课程简介
-              <span className="sr-only">(current)</span>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#teachers">
-              导师
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#events">
-              精彩活动
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#students">
-              明星学员
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#gallery">
-              课程介绍
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#contact">
-              关于我们 & 报名咨询
-            </a>
-          </li>
-        </ul>
+      <Collapse className="navbar-collapse" id="Nav">
+        <Nav className="navbar-nav me-auto">
+          {menu.map(({ title, href }) => (
+            <NavLink key={title} href={href}>
+              {title}
+            </NavLink>
+          ))}
+        </Nav>
 
-        <ul className="navbar-nav nav-flex-icons">
-          <li className="nav-item">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              className="nav-link"
-              href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzI4MzY0NDQxMg==&scene=126&bizpsid=0#wechat_redirect"
-            >
-              <i className="fab fa-weixin"></i>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              className="nav-link"
-              href="https://www.weibo.com/u/6055886285?refer_flag=1001030103_"
-            >
-              <i className="fab fa-weibo"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+        <Nav className="navbar-nav nav-flex-icons">
+          <NavLink
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzI4MzY0NDQxMg==&scene=126&bizpsid=0#wechat_redirect"
+          >
+            <FAIcon group="brands" name="weixin" />
+          </NavLink>
+          <NavLink
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav-link"
+            href="https://www.weibo.com/u/6055886285?refer_flag=1001030103_"
+          >
+            <FAIcon group="brands" name="weibo" />
+          </NavLink>
+        </Nav>
+      </Collapse>
+    </Container>
+  </Navbar>
 );
