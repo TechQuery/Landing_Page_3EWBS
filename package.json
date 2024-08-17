@@ -8,11 +8,11 @@
   },
   "dependencies": {
     "boot-cell": "^2.0.0-beta.29",
-    "dom-renderer": "^2.1.8",
+    "dom-renderer": "^2.3.0",
     "web-utility": "^4.4.0"
   },
   "devDependencies": {
-    "parcel": "^2.12.0"
+    "parcel": "~2.12.0"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead, IE 11",
   "scripts": {
